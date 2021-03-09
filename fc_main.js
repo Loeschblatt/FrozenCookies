@@ -2405,8 +2405,10 @@ function autoCookie() {
         // This apparently *has* to stay here, or else fast purchases will multi-click it.
         if (goldenCookieLife() && FrozenCookies.autoGC) {
             for (var i in Game.shimmers) {
-                if (Game.shimmers[i].type == 'golden' && shimmer.force != 'cookie storm drop') {
-			Game.shimmers[i].pop();
+                if (Game.shimmers[i].type == 'golden') {
+					if ((Game.shimmers[i].force != 'cookie storm drop') || (Math.random() < 0.05)){
+						Game.shimmers[i].pop();
+					}
                 }
             }
         }
