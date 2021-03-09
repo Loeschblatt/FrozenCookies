@@ -2406,7 +2406,7 @@ function autoCookie() {
         if (goldenCookieLife() && FrozenCookies.autoGC) {
             for (var i in Game.shimmers) {
                 if (Game.shimmers[i].type == 'golden') {
-			if ((shimmer.force != 'cookie storm drop') || (Math.random() < 0.05))
+			if (shimmer.force != 'cookie storm drop')
 				Game.shimmers[i].pop();
                 }
             }
