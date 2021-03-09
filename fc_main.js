@@ -2406,7 +2406,7 @@ function autoCookie() {
         if (goldenCookieLife() && FrozenCookies.autoGC) {
             for (var i in Game.shimmers) {
                 if (Game.shimmers[i].type == 'golden') {
-					Game.shimmers[i].pop();
+                    Game.shimmers[i].pop();
                 }
             }
         }
